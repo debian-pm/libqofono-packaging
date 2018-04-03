@@ -1,0 +1,125 @@
+libqofono (0.92-1) UNRELEASED; urgency=medium
+
+  * New upstream version
+  * Standards version 4.1.3
+  * compat 11
+
+ -- Jonah Brüchert <jbb.mail@gmx.de>  Tue, 03 Apr 2018 15:33:31 +0200
+
+libqofono (0.90+16.10.20160901-0ubuntu1) yakkety; urgency=medium
+
+  * New upstream release
+  * debian/control
+    - Dropped recommends for ofono to a suggests
+    - Renamed QML module to follow qml-module-ofono naming (LP: #1342031)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 01 Sep 2016 14:59:50 +0000
+
+libqofono (0.82+16.04.20160127-0ubuntu1) xenial; urgency=medium
+
+  * Make ofono dependency optional (LP: #1521142)
+
+ -- Pete Woods <ci-train-bot@canonical.com>  Wed, 27 Jan 2016 14:19:53 +0000
+
+libqofono (0.82+15.10.20150925-0ubuntu1) wily; urgency=medium
+
+  * libqofono-dev should depend on libqofono-qt5-0 (= ${binary:Version}
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 25 Sep 2015 13:57:19 +0000
+
+libqofono (0.82+15.10.20150911-0ubuntu1) wily; urgency=medium
+
+  [ Ken VanDine ]
+  * New upstream release.
+  * -debian/patches/expose_modem_tech.patch 
+    - Dropped, upstream now provides availableTechnologies
+  * debian/control
+    - Bumped ofono depends to 1.16 for availableTechnologies
+  * added packaging added: .bzr-builddeb/ .bzr-builddeb/default.conf
+    debian/ debian/changelog debian/compat debian/control
+    debian/copyright debian/libqofono-dev.install debian/libqofono-qt5-
+    0.install debian/patches/ debian/patches/connman-resetcontexts.patch
+    debian/patches/context-preferred.patch
+    debian/patches/mtk_settings_binding.patch debian/patches/series
+    debian/qtdeclarative5-ofono0.2.install debian/rules debian/source/
+    debian/source/format
+
+ -- Tony Espy <ci-train-bot@canonical.com>  Fri, 11 Sep 2015 12:50:11 +0000
+
+libqofono (0.79-0ubuntu2~gcc5.1) wily; urgency=medium
+
+  * No-change test rebuild for g++5 ABI transition
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 17 Jul 2015 22:20:07 +0000
+
+libqofono (0.79-0ubuntu1) wily; urgency=medium
+
+  * New upstream release.
+  * debian/patchescontext-preferred.patch
+    debian/patches/connman-resetcontexts.patch
+    debian/patches/mtk_settings_binding.patch
+    debian/patches/expose_modem_tech.patch: Updated
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 26 Jun 2015 10:16:02 -0400
+
+libqofono (0.70-0ubuntu4) wily; urgency=medium
+
+  [ Jonas Drange ]
+  * debian/patches/connman-resetcontexts.patch
+    - Added bindings to Ofono's reset context API (LP: #1338758)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 21 May 2015 16:16:51 -0400
+
+libqofono (0.70-0ubuntu3) vivid; urgency=medium
+
+  * debian/patches/context-preferred.patch
+    - Added bindings to the Ofono ConnectionContext's "Preferred" property,
+      patch thanks to Jonas Drange
+  * debian/control
+    - depend on ofono >= 1.12.bzr6892+15.04.20150407, required for the
+    preferred property
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 22 Apr 2015 10:58:17 -0400
+
+libqofono (0.70-0ubuntu2) vivid; urgency=medium
+
+  * debian/control
+    - fixed typo in breaks
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 14 Jan 2015 09:36:03 -0500
+
+libqofono (0.70-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release.
+  * Dropped patches applied upstream, service_numbers.patch and 
+    fix_multiarch.patch
+  * Refreshed expose_modem_tech.patch and mtk_settings_binding.patch
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 12 Jan 2015 11:32:24 -0500
+
+libqofono (0.53-0ubuntu3) vivid; urgency=medium
+
+  * debian/patches/mtk_settings_binding.patch
+    - add mtk (mediatek) settings binding which allows consumer
+      to set which modem to allow 3G communication (LP: #1373388)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 21 Nov 2014 10:07:54 -0500
+
+libqofono (0.53-0ubuntu2) utopic; urgency=medium
+
+  * debian/patches/expose_modem_tech.patch
+    - radiosettings: expose modemtechnologies (LP: #1346790)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 20 Aug 2014 11:17:52 -0400
+
+libqofono (0.53-0ubuntu1) utopic; urgency=low
+
+  [ Ken VanDine ]
+  * New package
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * debian/patches/fix_multiarch.patch:
+    - Fix qmake files to enable proper multiarch support during package build.
+  * Prepare proper copyright information
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 18 Jun 2014 13:02:42 -0400
